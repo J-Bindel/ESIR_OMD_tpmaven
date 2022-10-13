@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.29.0" timestamp="2022-10-10T14:59:56.975">
+<file name="/Users/jbindel/Programmation/workspace_ESIR_OMD/tpmaven/src/main/java/fr/esir/omd/ci/tpmaven/App.java">
+<violation beginline="183" endline="183" begincolumn="45" endcolumn="54" rule="UnusedFormalParameter" ruleset="Best Practices" package="fr.esir.omd.ci.tpmaven" class="App" method="createTable" variable="subCatPart" externalInfoUrl="https://pmd.github.io/pmd-6.29.0/pmd_rules_java_bestpractices.html#unusedformalparameter" priority="3">
+Avoid unused method parameters such as 'subCatPart'.
+</violation>
+<violation beginline="188" endline="188" begincolumn="60" endcolumn="60" rule="UnusedFormalParameter" ruleset="Best Practices" package="fr.esir.omd.ci.tpmaven" class="App" method="addEmptyLine" variable="i" externalInfoUrl="https://pmd.github.io/pmd-6.29.0/pmd_rules_java_bestpractices.html#unusedformalparameter" priority="3">
+Avoid unused method parameters such as 'i'.
+</violation>
+<violation beginline="188" endline="188" begincolumn="45" endcolumn="53" rule="UnusedFormalParameter" ruleset="Best Practices" package="fr.esir.omd.ci.tpmaven" class="App" method="addEmptyLine" variable="paragraph" externalInfoUrl="https://pmd.github.io/pmd-6.29.0/pmd_rules_java_bestpractices.html#unusedformalparameter" priority="3">
+Avoid unused method parameters such as 'paragraph'.
+</violation>
+<violation beginline="193" endline="193" begincolumn="41" endcolumn="50" rule="UnusedFormalParameter" ruleset="Best Practices" package="fr.esir.omd.ci.tpmaven" class="App" method="createList" variable="subCatPart" externalInfoUrl="https://pmd.github.io/pmd-6.29.0/pmd_rules_java_bestpractices.html#unusedformalparameter" priority="3">
+Avoid unused method parameters such as 'subCatPart'.
+</violation>
+<violation beginline="215" endline="215" begincolumn="10" endcolumn="14" rule="UnconditionalIfStatement" ruleset="Error Prone" package="fr.esir.omd.ci.tpmaven" class="App" method="stackOverFlow" externalInfoUrl="https://pmd.github.io/pmd-6.29.0/pmd_rules_java_errorprone.html#unconditionalifstatement" priority="3">
+Do not use if statements that are always true or always false
+</violation>
+<violation beginline="229" endline="231" begincolumn="7" endcolumn="7" rule="CollapsibleIfStatements" ruleset="Design" package="fr.esir.omd.ci.tpmaven" class="App" method="contradictiveStatement" externalInfoUrl="https://pmd.github.io/pmd-6.29.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
+These nested if statements could be combined
+</violation>
+<violation beginline="244" endline="246" begincolumn="7" endcolumn="7" rule="CollapsibleIfStatements" ruleset="Design" package="fr.esir.omd.ci.tpmaven" class="App" method="interweavingStatement" externalInfoUrl="https://pmd.github.io/pmd-6.29.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
+These nested if statements could be combined
+</violation>
+<violation beginline="251" endline="251" begincolumn="17" endcolumn="21" rule="UnusedPrivateMethod" ruleset="Best Practices" package="fr.esir.omd.ci.tpmaven" class="App" method="min" externalInfoUrl="https://pmd.github.io/pmd-6.29.0/pmd_rules_java_bestpractices.html#unusedprivatemethod" priority="3">
+Avoid unused private methods such as 'min()'.
+</violation>
+</file>
+</pmd>

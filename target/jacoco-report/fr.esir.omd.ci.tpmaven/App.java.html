@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tpmaven</a> &gt; <a href="index.source.html" class="el_package">fr.esir.omd.ci.tpmaven</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package fr.esir.omd.ci.tpmaven;
+
+import com.itextpdf.text.Anchor;
+import com.itextpdf.text.Chapter;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Section;
+
+/**
+ *  Classe réalisant des actions arithmétiques
+ *  	Détermine aussi le max entre this.opd_1 et un autre entier
+ */
+
+public class App 
+{
+	
+	private int opd_1;
+	private int opd_2;
+	
+	
+	/**
+	 * @param opd_1 : entier pivot de cette classe
+	 */
+<span class="fc" id="L26">	public App(int opd_1) {</span>
+<span class="fc" id="L27">		this.opd_1 = opd_1;</span>
+<span class="fc" id="L28">	}</span>
+
+	/**
+	 * Print Hello World
+	 */
+    public static void main( String[] args )
+    {
+<span class="nc" id="L35">        System.out.println( &quot;Hello World!&quot; );</span>
+<span class="nc" id="L36">    }</span>
+    
+    
+    /**
+	 * @return the opd_1
+	 */
+	public int getOpd_1() {
+<span class="nc" id="L43">		return opd_1;</span>
+	}
+
+	/**
+	 * @param opd_1 the opd_1 to set
+	 */
+	public void setOpd_1(int opd_1) {
+<span class="nc" id="L50">		this.opd_1 = opd_1;</span>
+<span class="nc" id="L51">	}</span>
+	
+	/**
+	 * Implémentation de l'addition
+	 * @param b
+	 * @return : this.opd_1 + b
+	 */
+	public int add(int b) {
+<span class="nc" id="L59">		return this.opd_1+b;</span>
+	}
+	
+	/**
+	 * Implémentation de la multiplication
+	 * @param multiplicator
+	 */
+	public int multiplie(int multiplicator) {
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">    	if (multiplicator == 0) {</span>
+<span class="fc" id="L68">    		return 0;</span>
+    	}
+<span class="nc" id="L70">    	int i = 1 ;</span>
+<span class="nc bnc" id="L71" title="All 2 branches missed.">    	while (i &lt; multiplicator) {</span>
+<span class="nc" id="L72">    		this.opd_1 +=this.opd_1;</span>
+<span class="nc" id="L73">    		++i;</span>
+    	}
+<span class="nc" id="L75">    	return this.opd_1;</span>
+    }
+	
+	/**
+	 * Implémentation de la puissance
+	 * @param exponent
+	 * @return this.x power exponent
+	 */
+	public int pow (int exponent) {
+<span class="nc bnc" id="L84" title="All 2 branches missed.">		if (exponent == 0) {</span>
+<span class="nc" id="L85">			return 1 ;</span>
+		}
+<span class="nc" id="L87">		int i = 0;</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">		while (i &lt; exponent) {</span>
+<span class="nc" id="L89">			this.opd_1 *= this.opd_1;</span>
+<span class="nc" id="L90">			++i;</span>
+		}
+<span class="nc" id="L92">		return this.opd_1;</span>
+	}
+	
+	/**
+	 * Implémente la fonction max 
+	 * @param y : entier à comparer 
+	 * @return : this.x si x &gt; y, y sinon
+	 */
+	public int max (int y) {
+<span class="nc bnc" id="L101" title="All 2 branches missed.">    	if (this.opd_1 &gt; y) {</span>
+<span class="nc" id="L102">    		return this.opd_1;</span>
+    	}
+<span class="nc" id="L104">    	return y;</span>
+    }
+	
+	/**
+     *  Version flottante de max
+     * 		fonctionne par le sous-typage entier --&gt; double
+     * @param y : double à tester 
+     * @return : x si x &gt; y, y sinon
+     */
+    public double max (double y) {
+<span class="nc bnc" id="L114" title="All 2 branches missed.">    	if (this.opd_1 &gt; y) {</span>
+<span class="nc" id="L115">    		return this.opd_1;</span>
+    	}
+<span class="nc" id="L117">    	return y;</span>
+    }
+	
+	/**
+	 * Version statique de max
+	 * @param x : premier entier à tester
+	 * @param x : deuxième entier à tester
+	 * @return : x si x &gt; y, y sinon
+	 */
+    public static int max (int x, int y) {
+<span class="pc bpc" id="L127" title="1 of 2 branches missed.">    	if (x &gt; y) {</span>
+<span class="nc" id="L128">    		return x;</span>
+    	}
+<span class="fc" id="L130">    	return y;</span>
+    }
+    
+    /**
+     * CPD : détection ? 
+     */
+<span class="fc" id="L136">    static Font catFont = null;</span>
+<span class="fc" id="L137">    static Font subFont = null;</span>
+    static void addContent(Document document) throws DocumentException {
+<span class="nc" id="L139">		Anchor anchor = new Anchor(&quot;First Chapter&quot;, catFont);</span>
+<span class="nc" id="L140">        anchor.setName(&quot;First Chapter&quot;);</span>
+
+        // Second parameter is the number of the chapter
+<span class="nc" id="L143">        Chapter catPart = new Chapter(new Paragraph(anchor), 1);</span>
+
+<span class="nc" id="L145">		Paragraph subPara = new Paragraph(&quot;Subcategory 1&quot;, subFont);</span>
+<span class="nc" id="L146">        Section subCatPart = catPart.addSection(subPara);</span>
+<span class="nc" id="L147">        subCatPart.add(new Paragraph(&quot;Hello&quot;));</span>
+
+<span class="nc" id="L149">        subPara = new Paragraph(&quot;Subcategory 2&quot;, subFont);</span>
+<span class="nc" id="L150">        subCatPart = catPart.addSection(subPara);</span>
+<span class="nc" id="L151">        subCatPart.add(new Paragraph(&quot;Paragraph 1&quot;));</span>
+<span class="nc" id="L152">        subCatPart.add(new Paragraph(&quot;Paragraph 2&quot;));</span>
+<span class="nc" id="L153">        subCatPart.add(new Paragraph(&quot;Paragraph 3&quot;));</span>
+
+        // add a list
+<span class="nc" id="L156">        createList(subCatPart);</span>
+<span class="nc" id="L157">        Paragraph paragraph = new Paragraph();</span>
+<span class="nc" id="L158">        addEmptyLine(paragraph, 5);</span>
+<span class="nc" id="L159">        subCatPart.add(paragraph);</span>
+
+        // add a table
+<span class="nc" id="L162">        createTable(subCatPart);</span>
+
+        // now add all this to the document
+<span class="nc" id="L165">        document.add(catPart);</span>
+
+        // Next section
+<span class="nc" id="L168">        anchor = new Anchor(&quot;Second Chapter&quot;, catFont);</span>
+<span class="nc" id="L169">        anchor.setName(&quot;Second Chapter&quot;);</span>
+
+        // Second parameter is the number of the chapter
+<span class="nc" id="L172">        catPart = new Chapter(new Paragraph(anchor), 1);</span>
+
+<span class="nc" id="L174">        subPara = new Paragraph(&quot;Subcategory&quot;, subFont);</span>
+<span class="nc" id="L175">        subCatPart = catPart.addSection(subPara);</span>
+<span class="nc" id="L176">        subCatPart.add(new Paragraph(&quot;This is a very important message&quot;));</span>
+
+        // now add all this to the document
+<span class="nc" id="L179">        document.add(catPart);</span>
+
+<span class="nc" id="L181">    }</span>
+    
+    private static void createTable(Section subCatPart) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L186">	}</span>
+
+	private static void addEmptyLine(Paragraph paragraph, int i) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L191">	}</span>
+
+	private static void createList(Section subCatPart) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L196">	}</span>
+
+	/**
+     * Test : détection des boucles infinies ?
+     * @return
+     */
+    public int inc() {
+<span class="nc" id="L203">    	while (true) {</span>
+<span class="nc" id="L204">    		++this.opd_1;</span>
+    	}
+    	//return this.opd_1;
+    }
+
+    /**
+     * Test : détection de stackOverFlow ?
+     * @param y à incrémenter 
+     * @return y+1
+     */
+    public static int stackOverFlow(int y) {
+    	if (false) {
+    		return y;
+    	}
+<span class="nc" id="L218">    	return stackOverFlow(y+1);</span>
+    }
+    
+    /**
+     * Test : détecte les conditions contradictoires ?
+     * @param x
+     * @param y
+     * @return
+     */
+    public static int contradictiveStatement(int x, int y) {
+<span class="nc bnc" id="L228" title="All 2 branches missed.">    	if(x==y) {</span>
+<span class="nc bnc" id="L229" title="All 2 branches missed.">    		if(y&gt;x) {</span>
+<span class="nc" id="L230">    			return x;</span>
+    		}
+    	}
+<span class="nc" id="L233">    	return y;</span>
+    }
+    
+    /**
+     * Test : détecte les conditions contradictoires ?
+     * @param x
+     * @param y
+     * @return
+     */
+    public static int interweavingStatement(int x, int y) {
+<span class="nc bnc" id="L243" title="All 2 branches missed.">    	if(x==x) {</span>
+<span class="nc bnc" id="L244" title="All 2 branches missed.">    		if(x == x) {</span>
+<span class="nc" id="L245">    			return x;</span>
+    		}
+    	}
+<span class="nc" id="L248">    	return y;</span>
+    }
+    
+    private int min() {
+<span class="nc bnc" id="L252" title="All 2 branches missed.">    	if(this.opd_1&lt;this.opd_2 ) {</span>
+<span class="nc" id="L253">    		return this.opd_1;</span>
+    	}
+<span class="nc" id="L255">    	return this.opd_2;</span>
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

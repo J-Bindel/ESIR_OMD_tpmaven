@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="46" tokens="219">
+      <file column="5" endcolumn="55" endline="183" line="138"
+            path="/Users/jbindel/Programmation/workspace_ESIR_OMD/tpmaven/src/main/java/fr/esir/omd/ci/tpmaven/App.java"/>
+      <file column="5" endcolumn="55" endline="135" line="90"
+            path="/Users/jbindel/Programmation/workspace_ESIR_OMD/tpmaven/src/main/java/fr/esir/omd/ci/tpmaven/FirstPdf.java"/>
+      <codefragment><![CDATA[    static void addContent(Document document) throws DocumentException {
+		Anchor anchor = new Anchor("First Chapter", catFont);
+        anchor.setName("First Chapter");
+
+        // Second parameter is the number of the chapter
+        Chapter catPart = new Chapter(new Paragraph(anchor), 1);
+
+		Paragraph subPara = new Paragraph("Subcategory 1", subFont);
+        Section subCatPart = catPart.addSection(subPara);
+        subCatPart.add(new Paragraph("Hello"));
+
+        subPara = new Paragraph("Subcategory 2", subFont);
+        subCatPart = catPart.addSection(subPara);
+        subCatPart.add(new Paragraph("Paragraph 1"));
+        subCatPart.add(new Paragraph("Paragraph 2"));
+        subCatPart.add(new Paragraph("Paragraph 3"));
+
+        // add a list
+        createList(subCatPart);
+        Paragraph paragraph = new Paragraph();
+        addEmptyLine(paragraph, 5);
+        subCatPart.add(paragraph);
+
+        // add a table
+        createTable(subCatPart);
+
+        // now add all this to the document
+        document.add(catPart);
+
+        // Next section
+        anchor = new Anchor("Second Chapter", catFont);
+        anchor.setName("Second Chapter");
+
+        // Second parameter is the number of the chapter
+        catPart = new Chapter(new Paragraph(anchor), 1);
+
+        subPara = new Paragraph("Subcategory", subFont);
+        subCatPart = catPart.addSection(subPara);
+        subCatPart.add(new Paragraph("This is a very important message"));
+
+        // now add all this to the document
+        document.add(catPart);
+
+    }
+    
+    private static void createTable(Section subCatPart) {]]></codefragment>
+   </duplication>
+</pmd-cpd>
