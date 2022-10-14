@@ -27,16 +27,7 @@ public class App
 		this.opd_1 = opd_1;
 	}
 
-	/**
-	 * Print Hello World
-	 */
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
-    
-    
-    /**
+	 /**
 	 * @return the opd_1
 	 */
 	public int getOpd_1() {
@@ -253,6 +244,12 @@ public class App
     		return this.opd_1;
     	}
     	return this.opd_2;
+    }
+    
+    public static void main (String [] arg) {
+    	App app = new App (2);
+    	int mul2By3 = app.multiplie(3);
+    	System.out.println(mul2By3);
     }
     
 }
