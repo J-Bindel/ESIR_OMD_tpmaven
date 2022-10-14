@@ -25,8 +25,8 @@ public class AppTest
     @Test
     public void multiplieBy3() {
     	App app = new App (2);
-    	int test = app.multiplie(3);
-    	int oracle = 6;
+    	int test = app.multiplie(0);
+    	int oracle = 0;
     	assertTrue(test == oracle);
     }
    
@@ -37,8 +37,8 @@ public class AppTest
     @Test
     public void multiplieBy1 () {
     	App app = new App (2);
-    	int test = app.multiplie(1);
-    	int oracle = 2; 
+    	int test = app.multiplie(0);
+    	int oracle = 0; 
     	assertTrue (test == oracle);
     }
     
